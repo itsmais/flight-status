@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&display=swap');
+h1,h2,h3,footer,button,p,a{
+    font-family: 'IBM Plex Mono', monospace;
+}
+a{
+    color: #ff4d00;
+}
+h3{
+    margin-bottom: 20px;
+    font-weight: lighter;
+}
+h1, h3, h2, footer, p{
+    text-align: center;
+}
+.bold-title{
+    font-weight: 600;
+}
+.btn-secondary {
+    color: #fff;
+    background-color: #ff4d00;
+    border-color: #ff4d00;
+    margin-top: 10px;
+}
+footer{
+    font-size: small;
+}
+.main{
+    color: white;
+    padding: 30px;
+    background-color: #88898C;
+    border-color: #ff4d00;
+    border-width: 3px;
+    border-style: solid;
+    font-family: 'Heebo', sans-serif;
+    max-width: 800px;
+    align-content: center;
+}
+input{
+    align-content: center;
+    text-align: center;
+    font-family: 'Heebo', sans-serif;
+}
+
+.main p{
+    color: #FFF;
+}
+.sleep-now-btn{
+    margin-bottom: 10px;
+}
+.time-result{
+    font-weight: 500;
+    text-decoration: underline;
+}
+.content{
+    margin-top: 80px;
+}
