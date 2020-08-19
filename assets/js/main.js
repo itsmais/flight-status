@@ -4,6 +4,7 @@ function checkFlight(){
     let flightResult = document.getElementById("flight-result");
     // time in unix format
     let currentTime = (new Date()).getTime();
+    flightResult.innerHTML= "";
 
 
     // states of flights
@@ -41,15 +42,15 @@ function checkFlight(){
         let arrivalAirport = jsonObj["data"][0]["arrival"]["airport"];
         let arrivalTimeEstimated = jsonObj["data"][0]["arrival"]["estimated"];
 
-        console.log("flight date " + flightDate);
-        console.log("flight status " + flightStatus);
-        console.log("airline name " + airlineName); 
+        // console.log("flight date " + flightDate);
+        // console.log("flight status " + flightStatus);
+        // console.log("airline name " + airlineName); 
         
-        console.log("departure airport " + departureAirport);
-        console.log("departure time " + departureTimeEstimated);
+        // console.log("departure airport " + departureAirport);
+        // console.log("departure time " + departureTimeEstimated);
 
-        console.log("arrival airport " + arrivalAirport);
-        console.log("arrival time " + arrivalTimeEstimated);
+        // console.log("arrival airport " + arrivalAirport);
+        // console.log("arrival time " + arrivalTimeEstimated);
 
         flightResult.innerHTML += ("</br> <span class=\"bold-title\">flight date: </span>" + flightDate + "</br>");
         flightResult.innerHTML += ("<span class=\"bold-title\">flight status: </span>" + flightStatus + "</br>");
