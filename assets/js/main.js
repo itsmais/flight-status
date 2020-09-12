@@ -1,16 +1,12 @@
 function checkFlight(){
+    
     // Flight info
     let flightCode = document.getElementById("flight-code").value.toLowerCase();
     let flightResult = document.getElementById("flight-result");
+    
     // time in unix format
     let currentTime = (new Date()).getTime();
     flightResult.innerHTML= "";
-
-
-    // states of flights
-    // - in air -> time of landing, has been in air since, country of origin
-    // - not found -> can't find the flight you're looking for.
-
 
     var myHeaders = new Headers();
     myHeaders.append("Cookie", "XSRF-TOKEN=8c94279a-6bb5-4aae-92fa-864bcd13cb06");
@@ -26,7 +22,6 @@ function checkFlight(){
     fetch(url, requestOptions)
     .then(response => response.text())
     .then(result => {
-        // console.log(result);
         var jsonObj = JSON.parse(result);
         console.log(jsonObj);
 
@@ -42,16 +37,6 @@ function checkFlight(){
         let arrivalAirport = jsonObj["data"][0]["arrival"]["airport"];
         let arrivalTimeEstimated = jsonObj["data"][0]["arrival"]["estimated"];
 
-        // console.log("flight date " + flightDate);
-        // console.log("flight status " + flightStatus);
-        // console.log("airline name " + airlineName); 
-        
-        // console.log("departure airport " + departureAirport);
-        // console.log("departure time " + departureTimeEstimated);
-
-        // console.log("arrival airport " + arrivalAirport);
-        // console.log("arrival time " + arrivalTimeEstimated);
-
         flightResult.innerHTML += ("</br> <span class=\"bold-title\">flight date: </span>" + flightDate + "</br>");
         flightResult.innerHTML += ("<span class=\"bold-title\">flight status: </span>" + flightStatus + "</br>");
         flightResult.innerHTML += ("<span class=\"bold-title\">airline name: </span>" + airlineName + "</br>");
@@ -65,6 +50,4 @@ function checkFlight(){
         {
             console.log('error', error)
         });
-
-
 }
